@@ -1,0 +1,139 @@
+@font-face {
+  font-family: Roboto;
+  src: url(/assets/fonts/Roboto-Regular.ttf), url(/assets/fonts/Roboto-Bold.ttf);
+  font-weight: 400, 700;
+}
+
+:root {
+  --color-red: hsl(4, 100%, 67%);
+  --color-Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --color-Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  background-color: var(--color-Charcoal-Grey);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 78rem;
+  background-color: var(--White);
+  padding: 2rem;
+  border-radius: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 32.5rem;
+  /* gap: 2rem; */
+}
+
+.card-text {
+  padding: 4rem;
+  margin-left: -2rem;
+}
+
+.card-image {
+  background-image: url(/assets/images/illustration-sign-up-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+}
+
+.heading {
+  font-size: 4.5rem;
+  color: var(--color-Dark-Slate-Grey);
+}
+
+p {
+  color: var(--color-Charcoal-Grey);
+  font-size: 1.5rem;
+}
+
+.paragraph-upper {
+  margin-block: 2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.point {
+  display: flex;
+  margin-block: 1.5rem;
+}
+
+.point-icon {
+  margin-right: 1.5rem;
+}
+
+.form-group {
+  margin-block: 3.2rem;
+}
+
+.label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+form input#mail,
+form button.btn {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  outline: none;
+  border: 1px solid var(--Grey);
+  border-radius: 5px;
+}
+
+form input#mail {
+  margin-bottom: 2rem;
+}
+
+form button.btn {
+  background-color: var(--color-Dark-Slate-Grey);
+  color: var(--White);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 50em) {
+  .card {
+    height: 100vh;
+    border-radius: 0;
+    padding: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 35rem auto;
+  }
+
+  .card-image {
+    border-radius: 0 0 1rem 1rem;
+    grid-row: 1 / 2;
+  }
+
+  .card-text {
+    padding: 4rem;
+    margin-left: 0;
+  }
+}
