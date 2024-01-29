@@ -20,6 +20,14 @@ btnSubmit.addEventListener("click", (e) => {
     card.classList.remove("success");
     sucessBox.classList.remove("success");
   }
+
+  if (card.classList.contains("success")) {
+    sucessBox.classList.add("success");
+  }
+  else {
+    sucessBox.classList.remove("success");
+    
+  }
 });
 
 console.log(inputBox);
