@@ -46,7 +46,7 @@ body {
   border-radius: 2rem;
   display: grid;
   grid-template-columns: 1fr 32.5rem;
-  /* gap: 2rem; */
+  display: none;
 }
 
 .card-text {
