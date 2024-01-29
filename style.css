@@ -10,6 +10,8 @@
   --color-Charcoal-Grey: hsl(235, 18%, 26%);
   --Grey: hsl(231, 7%, 60%);
   --White: hsl(0, 0%, 100%);
+
+  --gradient-background: linear-gradient(to right, #ff527b, #ff644b);
 }
 
 *,
@@ -89,6 +91,7 @@ ul {
 
 .form-group {
   margin-block: 3.2rem;
+  position: relative;
 }
 
 .label {
@@ -112,10 +115,27 @@ form input#mail {
 }
 
 form button.btn {
-  background-color: var(--color-Dark-Slate-Grey);
+  background: var(--color-Dark-Slate-Grey);
   color: var(--White);
   font-weight: 700;
   cursor: pointer;
+}
+
+form button.btn:hover {
+  background: var(--gradient-background);
+}
+
+.err-msg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.2rem;
+  color: var(--color-red);
+  display: none;
+}
+
+.err-msg.visible {
+  display: block;
 }
 
 @media screen and (max-width: 50em) {
