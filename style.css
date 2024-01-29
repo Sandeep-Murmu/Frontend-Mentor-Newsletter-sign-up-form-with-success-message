@@ -46,6 +46,9 @@ body {
   border-radius: 2rem;
   display: grid;
   grid-template-columns: 1fr 32.5rem;
+}
+
+.card.success {
   display: none;
 }
 
@@ -102,7 +105,7 @@ ul {
 }
 
 form input#mail,
-form button.btn {
+form button.btn-submit {
   width: 100%;
   padding: 1.5rem 2rem;
   outline: none;
@@ -114,14 +117,20 @@ form input#mail {
   margin-bottom: 2rem;
 }
 
-form button.btn {
+form input#mail.error {
+  border: 1px solid var(--color-red);
+  background-color: hsla(4, 100%, 67%, 0.4);
+}
+
+form button.btn-submit {
   background: var(--color-Dark-Slate-Grey);
   color: var(--White);
   font-weight: 700;
+  border: none;
   cursor: pointer;
 }
 
-form button.btn:hover {
+form button.btn-submit:hover {
   background: var(--gradient-background);
 }
 
@@ -145,7 +154,11 @@ form button.btn:hover {
   width: 100%;
   max-width: 42rem;
   position: relative;
-  /* display: none; */
+  display: none;
+}
+
+.success-message-box.success {
+  display: block;
 }
 
 .success-heading {
@@ -218,5 +231,4 @@ form button.btn:hover {
     position: absolute;
     bottom: 0;
   }
-
 }
