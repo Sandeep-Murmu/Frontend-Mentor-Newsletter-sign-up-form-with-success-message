@@ -157,8 +157,13 @@ form button.btn-submit:hover {
   display: none;
 }
 
+.success-icon {
+  align-self: flex-start;
+}
+
 .success-message-box.success {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .success-heading {
@@ -214,12 +219,6 @@ form button.btn-submit:hover {
     border-radius: 0;
     height: 100vh;
     padding-top: 8rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .success-icon {
-    align-self: flex-start;
   }
 
   .btn-container {

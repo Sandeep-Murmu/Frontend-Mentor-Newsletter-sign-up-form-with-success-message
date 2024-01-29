@@ -23,10 +23,8 @@ btnSubmit.addEventListener("click", (e) => {
 
   if (card.classList.contains("success")) {
     sucessBox.classList.add("success");
-  }
-  else {
+  } else {
     sucessBox.classList.remove("success");
-    
   }
 });
 
