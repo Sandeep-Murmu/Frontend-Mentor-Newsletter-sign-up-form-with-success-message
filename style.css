@@ -106,8 +106,8 @@ form button.btn {
   width: 100%;
   padding: 1.5rem 2rem;
   outline: none;
-  border: 1px solid var(--Grey);
   border-radius: 5px;
+  border: 1px solid var(--Grey);
 }
 
 form input#mail {
@@ -138,6 +138,44 @@ form button.btn:hover {
   display: block;
 }
 
+.success-message-box {
+  background-color: var(--White);
+  padding: 4rem;
+  border-radius: 2rem;
+  width: 100%;
+  max-width: 42rem;
+  position: relative;
+  /* display: none; */
+}
+
+.success-heading {
+  font-size: 4.5rem;
+  line-height: 1;
+  margin-block: 2rem;
+}
+
+.success-paragraph {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.success-btn {
+  background: var(--color-Dark-Slate-Grey);
+  color: var(--White);
+  font-weight: 700;
+  width: 100%;
+  cursor: pointer;
+  padding: 1.5rem 2rem;
+  outline: none;
+  border: none;
+  border-radius: 0.8rem;
+  margin-block: 3rem 2rem;
+}
+
+.success-btn:hover {
+  background: var(--gradient-background);
+}
+
 @media screen and (max-width: 50em) {
   .card {
     height: 100vh;
@@ -156,4 +194,29 @@ form button.btn:hover {
     padding: 4rem;
     margin-left: 0;
   }
+}
+
+@media screen and (max-width: 26.25em) {
+  .success-message-box {
+    border-radius: 0;
+    height: 100vh;
+    padding-top: 8rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .success-icon {
+    align-self: flex-start;
+  }
+
+  .btn-container {
+    flex-grow: 1;
+    position: relative;
+  }
+
+  .success-btn {
+    position: absolute;
+    bottom: 0;
+  }
+
 }
